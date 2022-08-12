@@ -1,0 +1,109 @@
+.firstMainContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "poppinsRegular";
+
+  background-image: url(https://cdn.wallpapersafari.com/45/56/KAUCfH.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  p {
+    margin: 0px;
+    padding: 0px;
+  }
+  .formBox {
+    width: 40%;
+    height: 280px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 1px 85px -7px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 1px 85px -7px rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 85px -7px rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .headingWithBackBtn {
+      display: flex;
+
+      .heading {
+        font-size: 24px;
+        font-family: "poppinsSemiBold";
+        text-align: center;
+        text-transform: capitalize;
+        margin-left: 20px;
+      }
+
+      .backBtn {
+        outline: none;
+        border: none;
+        background-color: #fff;
+        font-size: 24px;
+      }
+    }
+    .firstheading {
+      font-size: 24px;
+      font-family: "poppinsSemiBold";
+      text-align: left;
+      text-transform: capitalize;
+      margin-left: 20px;
+    }
+
+    .input {
+      width: 100%;
+      margin-top: 20px;
+      input {
+        width: 100%;
+        padding: 13px;
+        border: 1.5px solid black;
+        outline: none;
+      }
+    }
+
+    .btn {
+      margin-top: 30px;
+
+      .nextButton {
+        font-family: "poppinsMediumItalic";
+        width: 100%;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #2f242d;
+        color: white;
+        font-size: 18px;
+        outline: none;
+        border: none;
+      }
+      .nextButtonDisable {
+        font-family: "poppinsMediumItalic";
+        width: 100%;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #524750;
+        color: white;
+        font-size: 18px;
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .formBox {
+    width: 80% !important;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .formBox {
+    width: 95% !important;
+  }
+}
+

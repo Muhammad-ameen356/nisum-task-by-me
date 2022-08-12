@@ -1,0 +1,41 @@
+.leftContainer {
+  width: 100%;
+  height: 80vh;
+  img {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+.rightContainer {
+  height: 80vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  .rightInnerContainer {
+    background-color: rgb(3, 41, 147);
+    padding: 40px;
+    h2,
+    h4 {
+      margin: 10px 0px;
+      padding: 0px;
+      color: white;
+    }
+    h2 {
+      font-size: 110px;
+      font-family: poppinsBold;
+    }
+    h4 {
+      font-family: poppinsRegular;
+      font-size: 18px;
+    }
+    button {
+      padding: 7px 25px;
+      color: black;
+      font-family: poppinsRegular;
+      background-color: greenyellow;
+      outline: none;
+      border: none;
+    }
+  }
+}
