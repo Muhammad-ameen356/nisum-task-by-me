@@ -7,16 +7,15 @@ import { Col, Container, Row } from "react-bootstrap";
 import style from "./styles.module.scss";
 
 const Home = () => {
-  const {
-    postState: { postLoading, posts },
-    loadMore,
-    allJobData,
-  } = useContext(PostContext);
-
+  // const {
+  //   postState: { postLoading, posts },
+  //   loadMore,
+  //   allJobData,
+  // } = useContext(PostContext);
 
   return (
     <div>
-      {postLoading ? (
+      {/* {postLoading ? (
         <div
           style={{
             display: "flex",
@@ -45,7 +44,7 @@ const Home = () => {
             <button onClick={() => loadMore()}>Load more </button>
           </div>
         </>
-      )}
+      )} */}
     </div>
   );
 };
