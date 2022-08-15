@@ -7,15 +7,19 @@ import { Col, Container, Row } from "react-bootstrap";
 import style from "./styles.module.scss";
 
 const Home = () => {
-  // const {
-  //   postState: { postLoading, posts },
-  //   loadMore,
-  //   allJobData,
-  // } = useContext(PostContext);
+  const { loadMore, data, initialLoading, loading, postData, setPostData } =
+    useContext(PostContext);
+
+  useEffect(() => {
+    console.log("this is run home useEffect");
+    console.log(postData, "postDatapostDatapostData");
+    console.log(data, "datadatadata");
+    setPostData([...postData, ...data]);
+  }, [data]);
 
   return (
     <div>
-      {/* {postLoading ? (
+      {initialLoading ? (
         <div
           style={{
             display: "flex",
@@ -25,26 +29,43 @@ const Home = () => {
             width: "100vw",
           }}
         >
-          <Loader loading={postLoading} size={200} color="#FF5A00" />
+          <Loader
+            name="PuffLoader"
+            loading={initialLoading}
+            size={200}
+            color="#FF5A00"
+          />
         </div>
       ) : (
         <>
           <Container>
             <Row>
-              {allJobData?.map((item, index) => {
+              {postData?.map((item, index) => {
                 return (
-                  <Col md={4}>
-                    <Posts data={item} />{" "}
+                  <Col md={4} key={item?.value?.id * index}>
+                    <Posts data={item.value} />
                   </Col>
                 );
               })}
             </Row>
           </Container>
-          <div className={style.loadMoreBtn}>
-            <button onClick={() => loadMore()}>Load more </button>
-          </div>
+
+          {loading ? (
+            <div className={style.loadMoreBtn}>
+              <Loader
+                name="BeatLoader"
+                loading={loading}
+                size={40}
+                color="#FF5A00"
+              />
+            </div>
+          ) : (
+            <div className={style.loadMoreBtn}>
+              <button onClick={() => loadMore()}>Load more </button>
+            </div>
+          )}
         </>
-      )} */}
+      )}
     </div>
   );
 };

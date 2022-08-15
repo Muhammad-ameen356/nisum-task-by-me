@@ -1,22 +1,18 @@
 import React from "react";
 import style from "./style.module.scss";
+import { AiTwotoneStar } from "react-icons/ai";
 
 const Posts = ({ data }) => {
-  const [companyName, ...rest] = data?.title?.toLowerCase()?.split("is");
+  const [companyName, ...rest] = data?.title?.toLowerCase()?.split(")");
   const jobDescription = rest?.join("is");
 
   const date = new Date(+data?.time);
-  console.log(date.getDate());
 
   const { jobrole } = JSON.parse(localStorage.getItem("profile"));
 
-  console.log(jobrole);
-
-  const filterData = data?.title?.split(" ");
-
-  const abc = filterData.indexOf("hiring");
-
-  console.log(abc);
+  const jobRoleMatch = data?.title
+    ?.toLowerCase()
+    .indexOf(jobrole.toLowerCase());
 
   return (
     <a
@@ -29,10 +25,11 @@ const Posts = ({ data }) => {
       rel="noreferrer"
     >
       <div className={style.boxContainer}>
-        <p className={style.companyName}>{companyName}</p>
-        <div className={style.jobDescription}>is{jobDescription}</div>
+        <p className={style.companyName}>{companyName})</p>
+        {jobRoleMatch > 0 && <AiTwotoneStar className={style.icon} />}
+        <div className={style.jobDescription}>{jobDescription}</div>
         <p className={style.time}>
-          {date?.getDate()}/{date?.getMonth() + 1}/{date?.getFullYear()}&nbsp;{" "}
+          {date?.getDate()}/{date?.getMonth() + 1}/{date?.getFullYear()}
           {date?.getHours()}:{date?.getMinutes()}:{date?.getSeconds()}
         </p>
       </div>

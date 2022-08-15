@@ -13,6 +13,7 @@
   -moz-box-shadow: 0px 2px 11px -3px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 2px 11px -3px rgba(0, 0, 0, 0.75);
   padding: 10px;
+  position: relative;
 
   .companyName {
     font-size: 20px;
@@ -34,5 +35,13 @@
     align-items: flex-end;
     height: 100%;
     padding: 0px 10px;
+  }
+
+  .icon {
+    font-size: 35px;
+    color: #ffd700;
+    position: absolute;
+    left: -10px;
+    top: -14px;
   }
 }
