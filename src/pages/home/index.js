@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Loader from "src/components/Loader/Loader";
-import PostContext from "src/contexts/postContext";
-import Posts from "src/components/Posts";
+import React, { useContext, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import Loader from "src/components/Loader/Loader";
+import Posts from "src/components/Posts";
+import PostContext from "src/contexts/postContext";
 import style from "./styles.module.scss";
 
 const Home = () => {

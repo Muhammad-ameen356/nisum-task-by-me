@@ -1,10 +1,10 @@
 import React from "react";
-import style from "./style.module.scss";
 import { AiTwotoneStar } from "react-icons/ai";
+import style from "./style.module.scss";
 
 const Posts = ({ data }) => {
   const [companyName, ...rest] = data?.title?.toLowerCase()?.split(")");
-  const jobDescription = rest?.join("is");
+  const jobDescription = rest?.join("");
 
   const date = new Date(+data?.time);
 

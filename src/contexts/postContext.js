@@ -1,6 +1,4 @@
-import React, { createContext, useEffect, useReducer, useState } from "react";
-import postReducer, { POST_INITIAL_STATE } from "src/reducers/postReducer";
-import ACTIONS from "src/constant/constant";
+import React, { createContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axiosinstance from "src/utils/axios/axiosInstance";
 
@@ -16,7 +14,6 @@ export const PostProvider = ({ children }) => {
   const [postData, setPostData] = useState([]);
 
   let idArr = [];
-  let loadingNo = 0;
   const fetchPost = () => {
     axiosinstance({
       method: "get",
