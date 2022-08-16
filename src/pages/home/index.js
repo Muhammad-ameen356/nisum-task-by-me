@@ -19,19 +19,11 @@ const Home = () => {
   return (
     <div>
       {initialLoading ? (
-        <div
-          style={{
-            display: "flex",
-            justiyContent: "center",
-            alignItems: "center",
-            height: "100vh",
-            width: "100vw",
-          }}
-        >
+        <div className={style.loader}>
           <Loader
-            name="PuffLoader"
+            name="BeatLoader"
             loading={initialLoading}
-            size={200}
+            size={40}
             color="#FF5A00"
           />
         </div>
