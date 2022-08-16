@@ -48,12 +48,12 @@ const NavbarComponent = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
             <Nav>
-              <NavLink to="/" className="navlink_container">
-                <Nav.Link onClick={() => navigate("/")}>Home</Nav.Link>
+              <NavLink to="/home" className="navlink_container">
+                <Nav.Link onClick={() => navigate("/home")}>Home</Nav.Link>
               </NavLink>
-              <NavLink to="about" className="navlink_container">
-                <Nav.Link onClick={() => navigate("stepform")}>Step Form</Nav.Link>
-              </NavLink>   
+              <NavLink to="/" className="navlink_container">
+                <Nav.Link onClick={() => navigate("/")}>Step Form</Nav.Link>
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

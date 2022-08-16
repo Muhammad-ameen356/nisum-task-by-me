@@ -19,18 +19,12 @@ const AppRoutes = () => {
       <CounterProvider>
         <PostProvider>
           <Routes>
-            <Route path="/" element={<NavbarComponent />}>
+            <Route index element={<StepForm />} />
+            <Route path="/home" element={<NavbarComponent />}>
               <Route index element={<Home />} />
               <Route path="*" element={<Error />} />
-              <Route
-                path="about"
-                element={
-                  <ProtectedRoute>
-                    <About />
-                  </ProtectedRoute>
-                }
-              />
             </Route>
+
             <Route
               path="signup"
               element={
@@ -43,11 +37,11 @@ const AppRoutes = () => {
               path="login"
               element={
                 <PublicRoute>
-                  {" "}
                   <Login />
                 </PublicRoute>
               }
             />
+
             <Route path="/stepform" element={<StepForm />} />
           </Routes>
         </PostProvider>

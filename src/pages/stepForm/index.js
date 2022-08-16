@@ -106,6 +106,7 @@ const Third = ({ setObj, obj }) => {
               setObj({ ...obj, jobrole: e.target.value });
             }}
           />
+          <p>*We use your job role for finding best matches</p>
         </div>
         <div className={style.btn}>
           <button
@@ -252,7 +253,7 @@ const Last = ({ setObj, obj }) => {
             onClick={() => {
               handleSubmit();
               console.log(obj);
-              navigate("/");
+              navigate("/home");
               toast.success("Form Submit successfully");
             }}
           >

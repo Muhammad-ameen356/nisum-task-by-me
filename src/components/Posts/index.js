@@ -8,11 +8,11 @@ const Posts = ({ data }) => {
 
   const date = new Date(+data?.time);
 
-  const { jobrole } = JSON.parse(localStorage.getItem("profile"));
+  const { jobrole } = JSON.parse(localStorage.getItem("profile")) || {};
 
   const jobRoleMatch = data?.title
     ?.toLowerCase()
-    .indexOf(jobrole.toLowerCase());
+    .indexOf(jobrole?.toLowerCase());
 
   return (
     <a
