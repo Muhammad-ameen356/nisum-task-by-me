@@ -2,11 +2,13 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import notFoundImg from "src/assets/images/page_not_found.png";
+import NavbarComponent from "src/components/Navbar/Navbar";
 import style from "./style.module.scss";
 
 const Error = () => {
   return (
     <div>
+      <NavbarComponent />
       <Container fluid>
         <Row>
           <Col md={6} lg={6} sm={12}>

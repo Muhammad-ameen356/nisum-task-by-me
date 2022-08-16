@@ -29,7 +29,7 @@ const Posts = ({ data }) => {
         {jobRoleMatch > 0 && <AiTwotoneStar className={style.icon} />}
         <div className={style.jobDescription}>{jobDescription}</div>
         <p className={style.time}>
-          {date?.getDate()}/{date?.getMonth() + 1}/{date?.getFullYear()}
+          {date?.getDate()}/{date?.getMonth() + 1}/{date?.getFullYear()} 
           {date?.getHours()}:{date?.getMinutes()}:{date?.getSeconds()}
         </p>
       </div>

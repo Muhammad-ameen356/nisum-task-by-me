@@ -22,7 +22,6 @@ const AppRoutes = () => {
             <Route index element={<StepForm />} />
             <Route path="/home" element={<NavbarComponent />}>
               <Route index element={<Home />} />
-              <Route path="*" element={<Error />} />
             </Route>
 
             <Route
@@ -41,8 +40,7 @@ const AppRoutes = () => {
                 </PublicRoute>
               }
             />
-
-            <Route path="/stepform" element={<StepForm />} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </PostProvider>
       </CounterProvider>
